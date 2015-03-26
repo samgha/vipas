@@ -11,5 +11,4 @@ Vipasyin Webshell detector (golang)
 * -db (local signature database or remote signature database) 
 * -path (file or dir)
 
-
 signature database from [here](http://www.shelldetector.com)
