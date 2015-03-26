@@ -13,7 +13,7 @@ import (
 
 var (
 	signatureDB = flag.String("db", "https://raw.githubusercontent.com/emposha/PHP-Shell-Detector/master/shelldetect.db", "image file path")
-	scanPath    = flag.String("path", ".", "scan path")
+	scanPath    = flag.String("path", "xiao.php.txt", "scan path")
 )
 
 func detect(path string, ch chan vipaser.Result, quit chan bool, errch chan error) {

@@ -155,10 +155,11 @@ func (vp *Vipaser) Detect(file string, showline bool) (Result, error) {
 
 			rd := bufio.NewReader(f)
 			for {
-				line, err := rd.ReadBytes('\n')
+				line, _, err := rd.ReadLine()
 				if err != nil || io.EOF == err {
 					break
 				}
+
 				lineNum += 1
 				lineHits := vp.vpSuspiciousFuncRE.FindAll(line, -1)
 
